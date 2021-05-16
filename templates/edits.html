@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{{post_stuff}}
+   This is the editing page!
+    <form action = "/edit/{{post_stuff[0]}}" method="POST">
+         <table>
+              <tr><td></td><td><input type ="text" name ="edit_book_title" ></td></tr>
+            <tr><td></td><td><input type ="submit" name ="edit" value ="Edit Title"></td></tr>
+
+             <tr><td></td><td><input type ="text" name ="edit_author_name" ></td></tr>
+             <tr><td></td><td><input type ="submit" name ="edit" value ="Edit Author"></td></tr>
+
+              <tr><td></td><td><input type ="text" name ="edit_content" ></td></tr>
+             <tr><td></td><td><input type ="submit" name ="edit" value ="Edit Content"></td></tr>
+
+              <tr><td></td><td><input type ="text" name ="edit_date" ></td></tr>
+             <tr><td></td><td><input type ="submit" name ="edit" value ="Edit Date"></td></tr>
+
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+This is the deleting page!
+    <form action = "/delete/{{del_post_stuff[0]}}" method="POST">
+         <table>
+              <tr><td></td><td><input type ="text" name ="delete_book_title" ></td></tr>
+            <tr><td></td><td><input type ="submit" name ="delete" value ="Delete Title"></td></tr>
+             <tr><td></td><td><input type ="text" name ="delete_author_name" ></td></tr>
+             <tr><td></td><td><input type ="submit" name ="delete" value ="Delete Author"></td></tr>
+             <tr><td></td><td><input type ="text" name ="delete_content" ></td></tr>
+             <tr><td></td><td><input type ="submit" name ="delete" value ="Delete Content"></td></tr>
+
+        </table>
+    </form>
+</body>
+</html>

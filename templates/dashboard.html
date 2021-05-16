@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   Posts on Dashboard Page:
+    <form action = "/add" method="POST">
+         <table>
+              <tr><td></td><td><input type ="text" name ="book_title" ></td></tr>
+             <tr><td></td><td><input type ="text" name ="author_name" ></td></tr>
+             <tr><td></td><td><input type ="text" name ="content" ></td>
+             <tr><td></td><td><input type ="text" name ="date" ></td></tr>
+             <tr><td></td><td><input type ="submit" name ="add" value ="Add"></td></tr>
+
+        </table>
+    </form>
+
+
+  {%for row in list_title%}
+    <tr>
+         {{row[1]}}
+
+    </tr>
+
+    <form action = "/edit/{{row[0]}}" method="GET">
+        <tr><td></td><td><input type ="hidden" name ="list_title" value ="{{row[0]}}"></td></tr>
+        <tr><td></td><td><input type ="submit" name ="list_title" value ="Edit"></td></tr>
+
+    </form>
+
+<form action = "/delete/{{row[0]}}" method="POST">
+     <tr><td></td><td><input type ="hidden" name ="list_title" value ="{{row[0]}}"></td></tr>
+    <tr><td></td><td><input type ="submit" name ="list_title" value ="Delete"></td></tr>
+    </form>
+   {%endfor%}
+
+</body>
+</html>
